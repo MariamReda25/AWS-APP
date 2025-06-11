@@ -14,9 +14,9 @@
 #define TIMEOUT     std::chrono::seconds(10)
 
 // AWS IoT Core Credentials
-#define CA_PATH     "/home/root/APP-main/root-ca.pem"
-#define CERT_PATH   "/home/root/certificate.pem.crt"
-#define KEY_PATH    "/home/root/APP-main/private.pem.key"
+#define CA_PATH     "./root-ca.pem"
+#define CERT_PATH   "./certificate.pem.crt"
+#define KEY_PATH    "./private.pem.key"
 // Function to check for "gps_file" not empty
 bool checkForExist(const std::string& filename) {
     std::ifstream file(filename);
@@ -55,11 +55,11 @@ bool checkForExist(const std::string& filename) {
         std::cout << "Connected to AWS IoT Core!" << std::endl;
 
     
-            if (checkForExist("/home/root/APP-main/gps.txt")&&checkForExist("/home/root/APP-main/ai.txt")) {
+            if (checkForExist("./gps.txt")&&checkForExist("./ai.txt")) {
                 std::cout << "Detected! Sending alert to AWS IoT Core..." << std::endl;
 
-                   std::ifstream file1("/home/root/APP-main/ai.txt");
-std::ifstream file2("/home/root/APP-main/gps.txt");
+                   std::ifstream file1("./ai.txt");
+std::ifstream file2("./gps.txt");
 
 if (!file1 || !file2) {
     std::cerr << "Failed to open one or both files.\n";
