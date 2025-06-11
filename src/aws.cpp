@@ -14,7 +14,7 @@
 #define TIMEOUT     std::chrono::seconds(10)
 
 // AWS IoT Core Credentials
-#define CA_PATH     "/home/root/main_approot-ca.pem"
+#define CA_PATH     "/home/root/main_app/root-ca.pem"
 #define CERT_PATH   "/home/root/main_app/certificate.pem.crt"
 #define KEY_PATH    "/home/root/main_app/private.pem.key"
 // Function to check for "gps_file" not empty
