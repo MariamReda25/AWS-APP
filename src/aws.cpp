@@ -7,7 +7,7 @@
 #include <mqtt/client.h>
 #include <sstream>
 
-#define ADDRESS     "ssl://abr0s9fb0umjr-ats.iot.us-east-2.amazonaws.com:8883"
+#define ADDRESS     "abr0s9fb0umjr-ats.iot.us-east-2.amazonaws.com:8883"
 #define CLIENTID      "new-rpi"
 #define TOPIC       "road/damage"
 #define QOS         1
